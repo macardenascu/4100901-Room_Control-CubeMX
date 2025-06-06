@@ -124,7 +124,17 @@ void led_toggle(led_handle_t *led) {
 
 ### Uso de la librería en `main.c`
 
-Agrega las lineas de codigo a continuación en las secciones indicadas del archivo `main.c`.
+1. Agrega la librería al `CMakeLists.txt`.
+
+```CMake
+# Add sources to executable
+target_sources(${CMAKE_PROJECT_NAME} PRIVATE
+    # Add user sources here
+    Core/Src/led_driver.c
+)
+```
+
+2. Agrega las lineas de codigo a continuación en las secciones indicadas del archivo `main.c`.
 
 ```c
 
