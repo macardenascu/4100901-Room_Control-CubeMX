@@ -94,7 +94,18 @@ void ring_buffer_flush(ring_buffer_t *rb)
 
 ## Ejemplo Conceptual de Uso
 
-Agregue el codigo en los bloques indicados en `main.c`:
+1. Agregue el archivo fuente al CMakeLists.txt
+
+```CMake
+# Add sources to executable
+target_sources(${CMAKE_PROJECT_NAME} PRIVATE
+    # Add user sources here
+    Core/Src/led_driver.c
+    Core/Src/ring_buffer.c
+)
+```
+
+2. Agregue el codigo en los bloques indicados en `main.c`:
 
 ```c
 /* USER CODE BEGIN Includes */
@@ -144,5 +155,9 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 ```
 
 ---
+
+## Ejercicio
+
+Implemente las funciones de ring_buffer.c y pruebe su funcionalidad usando la consola de PC con el USART2.
 
 **Siguiente Paso:** [Implementación de una librería para el teclado (KEYPAD.md)](KEYPAD.md)
