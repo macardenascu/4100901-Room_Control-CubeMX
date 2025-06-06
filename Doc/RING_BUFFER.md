@@ -4,6 +4,8 @@
 
 Un **buffer circular** o *ring buffer* es una estructura de datos en forma de cola circular, útil para almacenar datos de manera temporal, como en la recepción UART. Su ventaja es el aprovechamiento eficiente de memoria sin necesidad de mover datos.
 
+![Circular_Buffer_Animation](assets/Circular_Buffer_Animation.gif)
+
 ---
 
 ## Componentes Clave
