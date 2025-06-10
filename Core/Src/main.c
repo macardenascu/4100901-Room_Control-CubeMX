@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "led_driver.h"
 
 /* USER CODE END Includes */
 
@@ -43,6 +44,7 @@
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+led_handle_t led1 = { .port = GPIOA, .pin = GPIO_PIN_5 }; // LD2 en NUCLEO-L476RG
 
 /* USER CODE END PV */
 
@@ -90,12 +92,16 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  
+  led_init(&led1);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1) {
+    led_toggle(&led1);
+    HAL_Delay(500);
+    
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
