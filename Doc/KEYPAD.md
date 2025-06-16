@@ -176,3 +176,5 @@ Tu tarea es:
    * Esperar 4 teclas
    * Verificar contra clave
    * Encender/parpadear LED según resultado
+
+**Siguiente Paso:** [Uso de una libreria existente (SSD1306.md)](SSD1306.md)
