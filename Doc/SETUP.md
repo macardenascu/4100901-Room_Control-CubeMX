@@ -43,6 +43,36 @@ Trabajaremos utilizando GitHub. Deberás crear tu propia copia (fork) de este re
 6.  Esto descargará el repositorio a una nueva carpeta llamada `4100901-Room_Control-CubeMX`.
 ![repo_clone](assets/repo_clone.png)
 
+### 2.3 Agregar `.gitignore`
+
+Para evitar que archivos generados automáticamente en compilacion sean incluidos en los commits, agrega un archivo .gitignore en la raíz del proyecto con el siguiente contenido sugerido:
+
+```gitignore
+# Archivos de compilación
+/build/
+*.o
+*.d
+*.elf
+*.hex
+*.bin
+
+# Archivos de configuración de VS Code
+.vscode/
+CMakeLists.txt.user
+cmake-build-*/
+
+# Archivos temporales y de sistema
+*.swp
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Otros
+*.launch
+*.settings/
+
+```
 
 ¡Listo! Tu entorno de desarrollo está preparado. Ahora puedes pasar a la siguiente sección para configurar el microcontrolador.
 
