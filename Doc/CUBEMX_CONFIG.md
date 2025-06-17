@@ -68,9 +68,10 @@ Ve a la pestaña **"Pinout & Configuration"**.
 1.  Ve a la pestaña **"Project Manager"**.
 2.  En la sub-pestaña "Project":
     *   Dale un nombre al proyecto (ej. `4100901-Room_Control-CubeMX`).
-    *   Asegúrate de que la `Toolchain / IDE` esté configurada como **`CMake`**. 
-3.  Haz clic en el botón **"Generate Code"** (usualmente un icono de engranaje o un botón con ese texto).
-4.  STM32CubeMX generará/actualizará los archivos de configuración y el código de inicialización HAL en tu proyecto dentro de las carpetas `Core` y `Drivers`.
+    *   Asegúrate de que la `Toolchain / IDE` esté configurada como **`CMake`**.
+3.  En la sub-pestaña **"Code Generator"**, selecciona la opcion `Copy only the necessary library files`.
+4.  Haz clic en el botón **"Generate Code"** (usualmente un icono de engranaje o un botón con ese texto).
+5.  STM32CubeMX generará/actualizará los archivos de configuración y el código de inicialización HAL en tu proyecto dentro de las carpetas `Core` y `Drivers`.
 
 ![Generate Code](assets/generate_code.png)
 
